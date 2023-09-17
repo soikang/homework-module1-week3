@@ -27,6 +27,13 @@
                 </nav>
             </div>
         </header>
+        <!-- adding time of day code -->
+        
+        <section id="timeofday">
+            <span>Your Current Local Time : </span>
+            <span id="clock"></span>
+        </section>
+        
         <main>
             <div class="main-text">
                 <h2>Introducing California's Greatest Cliffs</h2>
@@ -74,5 +81,51 @@
             </div>
         </footer>
     </div>
+    <!-- Javascript code -->
+    <script>
+        //create a time data function
+        function currentTime(){
+            //declare variables
+            var d = new Date(); //get current date
+            var hr = d.getHours(); //get current hours
+            var min = d.getMinutes(); //get current minutes
+            var sec = d.getSeconds(); //get current seconds
+            var ampm; //declare empty variable to store AM or PM
+
+            //add 0 to single digits for seconds
+            if (sec < 10){
+                sec = "0" + sec;
+            }
+
+            //add 0 to single digits for minutes
+            if (min < 10){
+                min = "0" + min;
+            }
+
+            //determine AM or PM string
+            if (hr == 12){
+                ampm = "PM"; //set to PM
+            }
+            else if ( hr > 12){
+                hr -= 12; //deduct 12 from hours greater than 12 (military time)
+                ampm = "PM" //set to PM
+            }
+            else {
+                ampm = "AM"; //set to AM
+            }
+
+            //assemble time format to display 
+            var time = hr + ":" + min + ":" + sec + " " + ampm;
+
+            //display current local time and time zone on HTML elements 
+            document.getElementById("clock").innerHTML = time; //adding time
+
+            //run time data function every 1 second
+            setInterval(currentTime, 1000); //setting timer
+        }
+         //initial run of time data function
+        //  currentTime();
+    </script>
+
     </body>
 </html>

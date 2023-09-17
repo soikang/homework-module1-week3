@@ -194,7 +194,7 @@ main h1 {
 main p {
     padding-bottom: 10px;
 }
-span:first-child{
+span:first-child :not(#timeofday){
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -314,3 +314,21 @@ figure {
     height: 100%;
     margin: 0;
 }
+
+/* clock */
+#timeofday{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3a3a3a;
+    background-image: linear-gradient(rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#clock {
+    color: #125688;
+}
+/* Font: Arial, Helvetica, sans-serif
+• Font colors: #3a3a3a, #125688
+• Linear gradient color: 0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%
+Ø Get gradient color from here: https://cssgradient.io */
