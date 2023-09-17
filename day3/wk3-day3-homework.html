@@ -73,8 +73,47 @@
   /* Now it's your turn to do the rest as seen on the preview */
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
+  function half(num) {
+    var halvedNumber = num/2;
+    document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + halvedNumber;
+  }
+  var halfButton = document.getElementById("half-button");
+    halfButton.addEventListener("click", function() {
+    var num = document.getElementById("half-input").value;
+    half(num);
+  });
 
+  function fraction(num, whole) {
+    var percentage = num/whole * 100;
+    document.getElementById("solution").innerHTML = num + ' is ' + percentage + '%' + ' of ' + whole;
+  }
+  var percentButton = document.getElementById("percent-button");
+    percentButton.addEventListener("click", function() {
+    var num = document.getElementById("percent1-input").value;
+    var whole = document.getElementById("percent2-input").value;
+    fraction(num, whole);
+  });
 
+  function integer(num) {
+    var roundedNum = Math.round(num);
+    document.getElementById("solution").innerHTML = 'The nearest whole number of ' + num + ' is ' + roundedNum;
+  }
+  var intButton = document.getElementById("int-button");
+    intButton.addEventListener("click", function() {
+    var num = document.getElementById("int-input").value;
+    integer(num);
+  });
+
+  function circle(num) {
+    var pi = 3.14159265358979323846;
+    var circleArea = num * num * pi;
+    document.getElementById("solution").innerHTML = 'The area of circle with radius ' + num + ' is ' + circleArea;
+  }
+  var circleButton = document.getElementById("area-button");
+    circleButton.addEventListener("click", function() {
+    var num = document.getElementById("area-input").value;
+    circle(num);
+  });
 </script>
 </body>
 </html>
