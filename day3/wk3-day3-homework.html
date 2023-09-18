@@ -56,7 +56,7 @@
 
 
 <script>
-
+  // first function is already done
   function squareNumber(num) {
       var squaredNumber = num * num;
       document.getElementById("solution").innerHTML = 'The result of squaring the number ' + num + ' is ' + squaredNumber;
@@ -73,6 +73,8 @@
   /* Now it's your turn to do the rest as seen on the preview */
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
+
+  // half the number
   function half(num) {
     var halvedNumber = num/2;
     document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + halvedNumber;
@@ -83,6 +85,7 @@
     half(num);
   });
 
+  // calculate fraction
   function fraction(num, whole) {
     var percentage = num/whole * 100;
     document.getElementById("solution").innerHTML = num + ' is ' + percentage + '%' + ' of ' + whole;
@@ -94,6 +97,7 @@
     fraction(num, whole);
   });
 
+  // round up
   function integer(num) {
     var roundedNum = Math.round(num);
     document.getElementById("solution").innerHTML = 'The nearest whole number of ' + num + ' is ' + roundedNum;
@@ -104,6 +108,7 @@
     integer(num);
   });
 
+  // area of a circle
   function circle(num) {
     var pi = 3.14159265358979323846;
     var circleArea = num * num * pi;
