@@ -294,7 +294,7 @@ Colors: #9ed034, #4977D1, #fff
     grid-template-columns: repeat(2, 400px);
     grid-template-rows: repeat(2, 250px);
     justify-content: center;
-    height: 60%;
+    height: 80%;
 }
 .cliff img {
     width: 100%;
